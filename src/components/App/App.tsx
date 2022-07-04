@@ -98,11 +98,9 @@ const Layout = () => {
       <Page className="App">
         <Center>
           {isConnected ? (
-            <>
-              <Card>
-                <Outlet />
-              </Card>
-            </>
+            <Card>
+              <Outlet />
+            </Card>
           ) : (
             <ConnectWallet isConnecting={isConnecting} onConnect={onConnect} />
           )}
